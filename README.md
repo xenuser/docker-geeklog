@@ -1,5 +1,5 @@
 # docker-geeklog
-Inofficiall material for spinning up Geeklog with Docker containers.
+Inofficiall material for spinning up a DEV instance of Geeklog with Docker containers.
 
 # About docker-geeklog
 This is just a simple example of how Geeklog can be deployed via Docker (compose).
