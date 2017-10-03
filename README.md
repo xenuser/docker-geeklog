@@ -26,7 +26,7 @@ On your Docker host, create the following directories:
 
 Afterwards, run:
 ```
-	dockr-compose up -d
+	docker-compose up -d
 ```
 
 Example output:
