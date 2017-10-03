@@ -26,6 +26,9 @@ On your Docker host, create the following directories:
 	/geeklog/mysql
 ```
 
+Now open up docker-compose.yml and edit the MySQL ENV vars (regarding passwords etc.).
+Make sure to provide your own credentials. 
+
 
 Afterwards, run:
 ```
