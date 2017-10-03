@@ -55,7 +55,7 @@ Creating apache_geeklog ... done
 
 ~~~
 
-Geeklog will be available under the folling name: http://geeklog.local
+Geeklog will be available under the following URI: http://geeklog.local
 
 # Contribution
 Please feel free to send in pull request if you want to improve something.
