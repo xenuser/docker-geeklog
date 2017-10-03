@@ -1,0 +1,38 @@
+version: '2'
+
+services:
+    geeklog-mariadb:
+      container_name: geeklog-mariadb
+      image: mariadb
+      command: mysqld --innodb-buffer-pool-size=20M
+      volumes:
+        - /geeklog/mysql:/var/lib/mysql
+      ports:
+        - "3306:3306"
+      environment:
+        - "MYSQL_DATABASE=geeklog"
+        - "MYSQL_USER=geeklog"
+        - "MYSQL_PASSWORD=RHtq9Lyz2np9"
+        - "MYSQL_ROOT_PASSWORD=8PuNNgp9wm2w"
+
+    geeklog-php:
+      container_name: php_geeklog
+      depends_on:
+        - geeklog-mariadb
+      image: valentinhoebel/php-geeklog
+      links:
+        - geeklog-mariadb:db
+      volumes:
+        - /geeklog/app:/var/www/geeklog
+
+    geeklog-apache:
+      container_name: geeklog-apache
+      depends_on:
+        - geeklog-php
+      image: valentinhoebel/apache-geeklog
+      links:
+        - geeklog-mariadb:db
+      ports:
+        - "80:80"
+      volumes_from:
+        - geeklog-php
