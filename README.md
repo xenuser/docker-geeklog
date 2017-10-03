@@ -11,6 +11,9 @@ Do NOT use this repository for setting up productive geeklog instances!
 This warning exists because of the following reasons:
 - The compose file contens hardcoded credentials
 - The compose file uses custom PHP-FPM and Apache images
+- The Apache vhost name is hardcoded (geeklog.local)
+- The MySQL port is exposed (using firewalling, if you don't deploy locally)
+- No SSL is used; Geeklog is exposed via HTTP
 
 The purpose of this repository is to create a Geeklog blog in a fast manner, so playing around with Geeklog is possible.
 It is not ment to deploy a blog system which should be used in production.
@@ -48,6 +51,8 @@ Creating apache_geeklog ...
 Creating apache_geeklog ... done
 
 ~~~
+
+Geeklog will be available under the folling name: http://geeklog.local
 
 # Contribution
 Please feel free to send in pull request if you want to improve something.
