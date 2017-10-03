@@ -20,7 +20,7 @@ On your Docker host, create the following directories:
 ```
 	/geeklog/
 	/geeklog/app
-	/geeklog/
+	/geeklog/mysql
 ```
 
 
